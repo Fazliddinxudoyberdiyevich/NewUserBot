@@ -41,6 +41,7 @@ USERBOT
 [32] Userinfo - Username information - .userinfo <reply>
 [33] Base64 - encode and decode  text messages - .b64 en <reply text> .b64 de <reply encoded message>
 [34] Snow - animation snow - .snow
+[35] Fazliddin - animation Fazliddin text - .Fazliddin
 
 Programmer - @dasturchi_uzb_007
 """)
